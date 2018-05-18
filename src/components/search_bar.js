@@ -12,10 +12,12 @@ class SearchBar extends Component {
 
 	// RENDER COMPONENT METHOD
 	render() {
-		// RETURN INPUT WITH EVENT HANDLER ARROW FUNCTION TO SET STATE
 		return (
 			<div>
-				<input onChange={event => this.setState({ term: event.target.value })} />
+				{/* RETURN INPUT WITH EVENT HANDLER ARROW FUNCTION TO SET STATE */}
+				<input 
+				value = {this.state.term}
+				onChange={event => this.setState({ term: event.target.value })} />
 			</div>
 		);
 	}
