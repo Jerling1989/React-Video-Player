@@ -8,4 +8,4 @@ const App = function () {
 };
 
 // TAKE THIS COMPONENTS GENERATED HTML AND PUT IN THE DOM
-ReactDOM.render(App);
+ReactDOM.render(<App />);
