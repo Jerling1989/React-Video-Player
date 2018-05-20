@@ -1,8 +1,12 @@
 // IMPORT REACT
 import React from 'react';
 
-// CREATE VIDEODETAIL FUNCTIONAL COMPONENT WITH PROPS.VIDEO ARGUMENT
+// CREATE VIDEODETAIL FUNCTIONAL COMPONENT WITH PROPS.VIDEO ARGUMENT FROM MAIN APP COMPONENT
 const VideoDetail = ({video}) => {
+
+	if (!video) {
+		return <div>Loading...</div>;
+	}
 
 	const videoId = video.id.videoId;
 	const url = `https://www.youtube.com/embed/${videoId}`;
