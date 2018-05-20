@@ -6,6 +6,7 @@ import VideoListItem from './video_list_item';
 // CREATE VIDEOLIST FUNCTIONAL COMPONENT WITH PROPS PASSED AS ARGUMENT
 const VideoList = (props) => {
 	// CREATE VIDEOITEMS ARRAY BY MAPPING THE VIDEOS PROP
+	// CREATE VIDEOLISTITEM COMPONENT FOR EACH ITERATION AND PASS VIDEO PROP
 	const videoItems = props.videos.map(video => <VideoListItem key={video.etag} video={video} />);
 
 	return (
