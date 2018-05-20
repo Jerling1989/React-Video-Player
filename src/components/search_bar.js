@@ -3,13 +3,11 @@ import React, { Component } from 'react';
 
 // CREATE SEARCHBAR CLASS COMPONENT
 class SearchBar extends Component {
-	// INITIALIZE STATE
 	constructor(props) {
 		super(props);
 		// SET STATE
 		this.state = { term: ''};
 	}
-
 	// RENDER COMPONENT METHOD
 	render() {
 		return (
@@ -21,7 +19,6 @@ class SearchBar extends Component {
 			</div>
 		);
 	}
-
 }
 
 // EXPORT COMPONENT
