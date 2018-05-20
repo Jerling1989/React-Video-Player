@@ -11,7 +11,7 @@ class SearchBar extends Component {
 	// RENDER COMPONENT METHOD
 	render() {
 		return (
-			<div>
+			<div className="search-bar">
 				{/* RETURN INPUT WITH EVENT HANDLER ARROW FUNCTION TO SET STATE */}
 				<input 
 				value = {this.state.term}
