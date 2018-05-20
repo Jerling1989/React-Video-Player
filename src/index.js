@@ -14,18 +14,29 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		// SET STATE
-		this.state = { videos: [] };
+		this.state = { 
+			videos: [],
+			selectedVideo: null
+		};
 		// USE RETURN DATA FROM YOUTUBE SEARCH TO UPDATE COMPONENT STATE
-		YTSearch({key: API_KEY, term: 'surfboards'}, videos => this.setState({ videos }));
+		YTSearch({key: API_KEY, term: 'surfboards'}, (videos) => {
+			this.setState({ 
+				videos: videos,
+				selectedVideo: videos[0]
+			});
+		});
 	}
 	// RENDER COMPONENT METHOD
 	render () {
 		return (
 			<div>
 				<SearchBar />
-				<VideoDetail video={this.state.videos[0]} />
-				{/* PASS VIDEOS PROP TO VIDEOLIST */}
-				<VideoList videos={this.state.videos} />
+			{/* PASS SELECTEDVIDEO PROP TO VIDEODETAIL */}
+				<VideoDetail video={this.state.selectedVideo} />
+				{/* PASS VIDEOS AND ONVIDEOSELECT PROPS TO VIDEOLIST */}
+				<VideoList 
+					onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+					videos={this.state.videos} />
 			</div>
 		);
 	}
