@@ -11,3 +11,6 @@ This is a video player app where the user can search for a video topic and get t
 
 - This is the completed user search from the previous screenshot above. This is used to demonstrate how the user can view instant results of their search query as they are typing it out.
 ![SEARCH TWO](/read_me/3-search-two.png)
+
+- FOUR
+![VIDEO LIST](/read_me/4-video-list.png)
