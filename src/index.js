@@ -20,7 +20,7 @@ class App extends Component {
 			selectedVideo: null
 		};
 		// PRELOADED SEARCH PHRASE
-		this.videoSearch('surfboards');
+		this.videoSearch('react js');
 	}
 
 	// CREATE VIDEOSEARCH METHOD
