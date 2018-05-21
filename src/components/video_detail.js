@@ -13,12 +13,13 @@ const VideoDetail = ({video}) => {
 	const url = `https://www.youtube.com/embed/${videoId}`;
 	// STRUCTURE COMPONENT
 	return (
-		<div className="video-detail col-md-8">
+		<div className="video-detail col-lg-8">
 			<div className="embed-responsive embed-responsive-16by9">
 				<iframe className="embed-responsive-item" src={url}></iframe>
 			</div>
 			<div className="details">
 				<div><h3>{video.snippet.title}</h3></div>
+				<div>From: {video.snippet.channelTitle}<br /><br /></div>
 				<div>{video.snippet.description}</div>
 			</div>
 		</div>

@@ -16,7 +16,8 @@ class SearchBar extends Component {
 				{/* RETURN INPUT WITH EVENT HANDLER ARROW FUNCTION TO SET STATE */}
 				<input 
 				value = {this.state.term}
-				onChange={event => this.onInputChange(event.target.value)} />
+				onChange={event => this.onInputChange(event.target.value)} 
+				placeholder="Search for videos..." />
 			</div>
 		);
 	}
