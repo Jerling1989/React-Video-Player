@@ -6,7 +6,7 @@ class SearchBar extends Component {
 	constructor(props) {
 		super(props);
 		// SET STATE
-		this.state = { term: ''};
+		this.state = { term: '' };
 	}
 	// RENDER COMPONENT METHOD
 	render() {
@@ -15,9 +15,14 @@ class SearchBar extends Component {
 				{/* RETURN INPUT WITH EVENT HANDLER ARROW FUNCTION TO SET STATE */}
 				<input 
 				value = {this.state.term}
-				onChange={event => this.setState({ term: event.target.value })} />
+				onChange={event => this.onInputChange(event.target.value)} />
 			</div>
 		);
+	}
+	// CREATE ONINPUTCHANGE METHOD
+	onInputChange(term) {
+		this.setState({term});
+		this.props.onSearchTermChange(term);
 	}
 }
 

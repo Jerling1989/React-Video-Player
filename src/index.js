@@ -18,20 +18,27 @@ class App extends Component {
 			videos: [],
 			selectedVideo: null
 		};
+		// PRELOADED SEARCH PHRASE
+		this.videoSearch('surfboards');
+	}
+
+	// CREATE VIDEOSEARCH METHOD
+	videoSearch(term) {
 		// USE RETURN DATA FROM YOUTUBE SEARCH TO UPDATE COMPONENT STATE
-		YTSearch({key: API_KEY, term: 'surfboards'}, (videos) => {
+		YTSearch({key: API_KEY, term: term}, (videos) => {
 			this.setState({ 
 				videos: videos,
 				selectedVideo: videos[0]
 			});
 		});
 	}
+
 	// RENDER COMPONENT METHOD
 	render () {
 		return (
 			<div>
-				<SearchBar />
-			{/* PASS SELECTEDVIDEO PROP TO VIDEODETAIL */}
+				<SearchBar onSearchTermChange={term => this.videoSearch(term)} />
+				{/* PASS SELECTEDVIDEO PROP TO VIDEODETAIL */}
 				<VideoDetail video={this.state.selectedVideo} />
 				{/* PASS VIDEOS AND ONVIDEOSELECT PROPS TO VIDEOLIST */}
 				<VideoList 
