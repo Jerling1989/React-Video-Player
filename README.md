@@ -4,3 +4,4 @@ This is a video player app where the user can search for a video topic and get t
 ---
 
 - ONE
+![HOME SCREEN](/read_me/1-home.png)
