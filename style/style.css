@@ -19,10 +19,6 @@
 	border-radius: 4px;
 }
 
-.list-group {
-	margin-bottom: 15px;
-}
-
 .list-group-item {
 	cursor: pointer;
 }
@@ -34,6 +30,7 @@
 @media (max-width: 991.98px) {
 	.list-group {
 		margin-left: 15px;
+		margin-bottom: 15px;
 	}
 
 	.search-bar input {
