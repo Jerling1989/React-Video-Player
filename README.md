@@ -8,3 +8,6 @@ This is a video player app where the user can search for a video topic and get t
 
 - Whenever the user searches a video topic in the top search bar the app will use the YouTube API to find the top 5 most relevant videos for that search. The app automatically fetches the results of the user search every time they change the search term.
 ![SEARCH ONE](/read_me/2-search-one.png)
+
+- THREE
+![SEARCH TWO](/read_me/3-search-two.png)
