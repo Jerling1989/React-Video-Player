@@ -10,6 +10,7 @@ class SearchBar extends Component {
 	}
 	// RENDER COMPONENT METHOD
 	render() {
+		// STRUCTURE COMPONENT
 		return (
 			<div className="search-bar">
 				{/* RETURN INPUT WITH EVENT HANDLER ARROW FUNCTION TO SET STATE */}

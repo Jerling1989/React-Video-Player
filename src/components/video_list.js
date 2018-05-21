@@ -9,6 +9,7 @@ const VideoList = (props) => {
 	// CREATE VIDEOLISTITEM COMPONENT FOR EACH ITERATION
 	// PASS VIDEO AND ONVIDEOSELECT PROPS
 	const videoItems = props.videos.map((video) => {
+		// STRUCTURE COMPONENT
 		return (
 			<VideoListItem 
 				onVideoSelect={props.onVideoSelect} 

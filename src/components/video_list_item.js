@@ -6,7 +6,7 @@ import React from 'react';
 const VideoListItem = ({video, onVideoSelect}) => {
 	// CREATE CONST FOR VIDEO THUMBNAIL URL
 	const imageUrl = video.snippet.thumbnails.default.url;
-
+	// STRUCTURE COMPONENT
 	return (
 		<li onClick={() => onVideoSelect(video)} className="list-group-item">
 			<div className="video-list media">
@@ -16,7 +16,7 @@ const VideoListItem = ({video, onVideoSelect}) => {
 
 				<div className="media-body">
 					<div className="media-heading">
-						{video.snippet.title}
+						<small>{video.snippet.title}</small>
 					</div>
 				</div>
 			</div>

@@ -1,7 +1,8 @@
-// IMPORT REACT
+// IMPORT PACKAGES
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
+import _ from 'lodash';
 // IMPORT COMPONENTS
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
@@ -32,12 +33,15 @@ class App extends Component {
 			});
 		});
 	}
-
 	// RENDER COMPONENT METHOD
 	render () {
+		// CREATE VIDEOSEARCH FUNCTION WITH THROTTLED RESPONSE USING LODASH
+		const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
+		// STRUCTURE COMPONENT
 		return (
 			<div>
-				<SearchBar onSearchTermChange={term => this.videoSearch(term)} />
+				{/* PASS VIDEOSEARCH FUNCTION INTO ONSEARCHTERMCHANGE PROP */}
+				<SearchBar onSearchTermChange={videoSearch} />
 				{/* PASS SELECTEDVIDEO PROP TO VIDEODETAIL */}
 				<VideoDetail video={this.state.selectedVideo} />
 				{/* PASS VIDEOS AND ONVIDEOSELECT PROPS TO VIDEOLIST */}
