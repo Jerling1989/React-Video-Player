@@ -7,6 +7,7 @@ import _ from 'lodash';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
+import Jumbotron from './components/header';
 // YOUTUBE API KEY
 const API_KEY = 'AIzaSyA6KRgUyCWq_OBNmoE3SikZ9R62hp250aA';
 
@@ -40,6 +41,7 @@ class App extends Component {
 		// STRUCTURE COMPONENT
 		return (
 			<div>
+				<Jumbotron />
 				{/* PASS VIDEOSEARCH FUNCTION INTO ONSEARCHTERMCHANGE PROP */}
 				<SearchBar onSearchTermChange={videoSearch} />
 				{/* PASS SELECTEDVIDEO PROP TO VIDEODETAIL */}
