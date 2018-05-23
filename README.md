@@ -3,7 +3,7 @@ This is a video player app where the user can search for a video topic and get t
 
 ---
 
-- Update: I added the bootstrap jumbotron header to the app with React, YouTube, and Node logos (the technologies used to create this app) for better front end formatting and design.
+- Update: I added the bootstrap jumbotron header to the app with React, YouTube, and Node logos (the technologies used to create this app) for better front end formatting and design. The rest of the pictures in the README doc do not feature this new header.
 ![UPDATE](/read_me/update.png)
 
 - The first thing the user will see upon the app loading is a simple interface with some video data already loaded. For this project I saw it fit to have the homepage loaded with videos on React. Below the main video is the video title, the name of the channel that published the video, and a brief description of the video.
