@@ -66,5 +66,7 @@
 @media (max-width: 575.98px) {
 	.jumbotron img {
 		width: 70%;
+		margin-top: -25px;
+		margin-bottom: -25px;
 	}
 }
