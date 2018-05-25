@@ -64,7 +64,7 @@
 }
 
 @media (max-width: 575.98px) {
-	.jumbotron {
-		display: none;
+	.jumbotron img {
+		width: 70%;
 	}
 }
